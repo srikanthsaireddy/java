@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Main s=new Main();
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	    int result=s.fact(n);
+	    System.out.print(result);
+	}
+	 int fact(int n)
+	{
+	    if(n>1)
+	    return n*fact(n-1);
+	    else
+	    {
+	        return 1;
+	    }
+	}
+}
