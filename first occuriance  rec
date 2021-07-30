@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main
+{
+    public static void main(String[] args)
+    {
+     Scanner sc=new Scanner(System.in);
+     int n=sc.nextInt();
+     int[] ar=new int[n];
+     for(int i=0;i<ar.length;i++)
+     {
+         ar[i]=sc.nextInt();
+     }
+     int d=sc.nextInt();
+     int res=Findtheelement(ar,0,d);
+     System.out.print(res);
+   }
+   public static int Findtheelement(int ar[],int idx,int d)
+   {
+       if(idx==ar.length)
+       {
+           return -1;
+       }
+       if(ar[idx]==d)
+       {
+           return idx;
+       }
+       else{
+           int fi=Findtheelement(ar,idx+1,d);
+           return fi;
+       }
+   }
+}
